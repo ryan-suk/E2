@@ -39,3 +39,6 @@ For questions, data access requests, or collaboration inquiries:
 📧 ryan.suk@emory.edu  
 🌐 https://www.ryansuk.com/research-team
 🌐 https://winshipcancer.emory.edu/profiles/suk-ryan.php
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15381497.svg)](https://doi.org/10.5281/zenodo.15381497)
