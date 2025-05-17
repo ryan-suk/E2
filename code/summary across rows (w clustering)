@@ -1,0 +1,105 @@
+import os
+import sys
+import time
+import json
+import pandas as pd
+import numpy as np
+
+# 1) Ensure required packages are installed:
+#    pip install openai numpy scikit-learn pandas openpyxl
+
+from sklearn.cluster import DBSCAN
+import openai
+
+# 2) Set OpenAI API key
+if not os.getenv("OPENAI_API_KEY"):
+    sys.exit("Error: OPENAI_API_KEY not set in environment.")
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+# 3) Load the per-row summarized data
+INPUT_PATH = r'C:\Data2.xlsx'
+try:
+    df = pd.read_excel(INPUT_PATH)
+except FileNotFoundError:
+    sys.exit(f"Error: cannot find {INPUT_PATH}")
+
+# 4) Build embeddings for 'common_questions' and cluster similar ones
+questions = df['common_questions'].dropna().astype(str).unique().tolist()
+embeddings = []
+for q in questions:
+    resp = openai.Embedding.create(input=q, model="text-embedding-ada-002")
+    embeddings.append(resp['data'][0]['embedding'])
+    time.sleep(0.5)  # avoid rate limits
+
+emb_np = np.array(embeddings)
+# Cosine-based clustering: eps ~0.1 groups ~90% similar
+clustering = DBSCAN(eps=0.1, metric="cosine", min_samples=1).fit(emb_np)
+labels = clustering.labels_
+
+# 5) Create canonical mapping: pick the shortest phrasing in each cluster
+clusters = {}
+for lbl, q in zip(labels, questions):
+    clusters.setdefault(lbl, []).append(q)
+
+canonical = {}
+for lbl, qs in clusters.items():
+    rep = min(qs, key=len)  # shortest string as representative
+    for q in qs:
+        canonical[q] = rep
+
+# 6) Add a collapsed column to df
+df['common_questions_collapsed'] = df['common_questions'].dropna().map(canonical)
+
+# 7) Helper to call OpenAI (retry/backoff)
+def call_openai(messages, model="gpt-4", max_tokens=1000, temperature=0.0):
+    delays = [1, 2, 4]
+    for d in delays:
+        try:
+            return openai.ChatCompletion.create(
+                model=model,
+                messages=messages,
+                temperature=temperature,
+                max_tokens=max_tokens
+            )
+        except openai.error.RateLimitError:
+            time.sleep(d)
+    sys.exit("Error: exceeded OpenAI rate limit.")
+
+# 8) Aggregate across rows by column, using collapsed questions
+aggregated = []
+for col in df.columns:
+    # select data source
+    if col == 'common_questions':
+        series = df['common_questions_collapsed']
+    else:
+        series = df[col]
+    entries = series.dropna().astype(str).tolist()
+    combined = "\n".join(entries)
+    prompt = (
+        f"You are an expert data summarizer. For the column '{col}', you have these entries:\n\n{combined}\n\n"
+        "Merge semantically equivalent items, rank by frequency, and write a concise summary. "
+        "Return JSON with keys: 'column', 'aggregated_items', 'summary'."
+    )
+    messages = [
+        {"role": "system", "content": "You are a precise data aggregation assistant."},
+        {"role": "user",   "content": prompt}
+    ]
+    resp = call_openai(messages)
+    text = resp.choices[0].message.content
+    # extract JSON
+    start, end = text.find("{"), text.rfind("}") + 1
+    try:
+        obj = json.loads(text[start:end])
+    except json.JSONDecodeError:
+        print(f"Warning: JSON parse failed for '{col}'.")
+        obj = {"column": col, "aggregated_items": [], "summary": ""}
+    aggregated.append(obj)
+
+# 9) Save aggregated results
+df_agg = pd.DataFrame(aggregated)
+OUTPUT_XLSX = "aggregated_analysis_with_clustering.xlsx"
+with pd.ExcelWriter(OUTPUT_XLSX, engine="openpyxl") as writer:
+    df.to_excel(writer, sheet_name="Raw_Data", index=False)
+    df_agg.to_excel(writer, sheet_name="Aggregated_Results", index=False)
+
+print(f"Completed. Results saved to {OUTPUT_XLSX}")
