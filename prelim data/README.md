@@ -5,6 +5,9 @@
 
 - Ryan Suk, PhD — Emory University
 - Yenan Zhu, PhD — University of Florida
+- Jessica Wells, PhD - Emory University
+- Alexander Tsai, MD, PhD - Massachusetts General Hospital/Harvard Medical School
+- Serena Jingchuan Guo, MD, PhD - University of Florida
 
 ## 🧠 Methods
 
