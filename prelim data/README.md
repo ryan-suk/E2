@@ -1,5 +1,5 @@
 # Decoding Real-World Conversations on Nutrition and Abnormal Cervical Cancer Screening: An NLP-Based Analysis of Public Online Discourse
-## * Refinement ongoing -- outputs will change as models improve.
+## * Refinement ongoing -- outputs may change as models improve.
 
 ## 👥 Investigators
 
