@@ -11,13 +11,13 @@
 
 ## 🧠 Methods
 
-We mined 31 Reddit threads—yielding 744 comments—and applied an OpenAI API–based NLP approach, supplemented by team validation, to extract key themes, common questions, commonly discussed dietary items, lifestyle changes, emotional states, and prevalent misconceptions.
+We mined 31 Reddit threads specifically focused on nutritional information—yielding 744 comments—and applied an OpenAI API–based NLP approach, supplemented by team validation, to extract key themes, common questions, commonly discussed dietary items, lifestyle changes, emotional states, and prevalent misconceptions.
 
 
 ## 🗂️ Global Key Themes
 | #  | Theme                                      |
 | -- | ------------------------------------------ |
-|  1 | Dietary choices and HPV                      |
+|  1 | HPV clearance                      |
 |  2 | Dietary supplements and immune responses                             |
 |  3 | Lifestyle changes and HPV management                          |
 |  4 | Emotional impact of HPV diagnosis                    |
@@ -38,10 +38,10 @@ We mined 31 Reddit threads—yielding 744 comments—and applied an OpenAI API�
 | Rank | Item                               |
 | ---- | ---------------------------------- |
 |  1   | Antioxidants (Vitamins A, C, D, E) |
-|  2   | Carotenoids                        |
+|  2   | AHCC + Medicinal Mushrooms                      |
 |  3   | Vegetables & Fruits                |
-|  4   | Fish & Nuts                        |
-|  5   | AHCC + Medicinal Mushrooms         |
+|  4   | Green tea                        |
+|  5   | Zinc        |
 
 
 ## 💊 Max Supplements Reported by One Individual
