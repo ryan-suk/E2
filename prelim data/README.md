@@ -21,7 +21,7 @@ We mined 31 Reddit threads specifically focused on nutritional information—yie
 |  2 | Dietary supplements and immune responses                             |
 |  3 | Lifestyle changes and HPV management                          |
 |  4 | Emotional impact of HPV diagnosis                    |
-|  5 | Self-care and healthy habits |
+|  5 | Gardasil and HPV clearance |
 
 
 
