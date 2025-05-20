@@ -4,6 +4,8 @@
 
 # Empathetic Empowerment (E2)
 
+## >> 🤖 To check our PRELIMINARY DATA >>> 👉[Click here to view the preliminary results](https://github.com/ryan-suk/E2/tree/main/prelim%20data)
+
 ## 📍 Project Overview
 
 **Empathetic Empowerment** is a research initiative to enhance patient understanding and follow-up care after abnormal cervical cancer screening results. Despite effective screening programs, many women experience confusion, anxiety, and stigma when faced with abnormal cytology or positive HPV tests, often compounded by misinformation online and rushed clinic discussions. 
