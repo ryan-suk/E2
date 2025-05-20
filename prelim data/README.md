@@ -6,8 +6,13 @@
 - Ryan Suk, PhD — Emory University
 - Yenan Zhu, PhD — University of Florida
 - Jessica Wells, PhD - Emory University
-- Alexander Tsai, MD, PhD - Massachusetts General Hospital/Harvard Medical School
+- Alexander Tsai, MD, PhD - Harvard Medical School
 - Serena Jingchuan Guo, MD, PhD - University of Florida
+
+## 🤝 Community & Advisory Collaborators
+- Anne Zajic (Cervivor: Patient advocate)
+- Lynne Nguyen (MD Anderson Cancer Center: Plain-language specialist)
+- TBD
 
 ## 🧠 Methods
 
