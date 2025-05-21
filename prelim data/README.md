@@ -12,7 +12,7 @@
 ## 🤝 Community & Advisory Collaborators
 - Anne Zajic (Cervivor: Patient advocate)
 - Lynne Nguyen (MD Anderson Cancer Center: Plain-language specialist)
-- TBD
+- Shirley "Bella" Borghi (Hispanic Health Coalition of Georgia)
 
 ## 🧠 Methods
 
