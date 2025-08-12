@@ -1,19 +1,6 @@
 # Decoding Real-World Conversations on Nutrition and Abnormal Cervical Cancer Screening: An NLP-Based Analysis of Public Online Discourse
 ## * Refinement ongoing -- outputs may change as models improve.
 
-## 👥 Investigators
-
-- Ryan Suk, PhD — Emory University
-- Yenan Zhu, PhD — University of Florida
-- Jessica Wells, PhD - Emory University
-- Alexander Tsai, MD, PhD - Harvard Medical School
-- Serena Jingchuan Guo, MD, PhD - University of Florida
-
-## 🤝 Community & Advisory Collaborators
-- Anne Zajic (Cervivor: Patient advocate)
-- Lynne Nguyen (MD Anderson Cancer Center: Plain-language specialist)
-- Shirley "Bella" Borghi (Hispanic Health Coalition of Georgia)
-
 ## 🧠 Methods
 
 We mined 31 Reddit threads specifically focused on nutritional information—yielding 744 comments—and applied an OpenAI API–based NLP approach, supplemented by team validation, to extract key themes, common questions, commonly discussed dietary items, lifestyle changes, emotional states, and prevalent misconceptions.
