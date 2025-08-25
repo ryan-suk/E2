@@ -1,20 +1,20 @@
 # Decoding Real-World Conversations on Nutrition and Abnormal Cervical Cancer Screening: An NLP-Based Analysis of Public Online Discourse
 ## * Refinement ongoing -- outputs may change as models improve.
 
-## 👥 Investigators
+## Investigators
 
 - Ryan Suk, PhD — Emory University
 - Yenan Zhu, PhD — University of Florida
 
-## 🤝 Community & Advisory Collaborators
+## Community & Advisory Collaborators
 - Anne Zajic (Cervivor: Patient advocate)
 
-## 🧠 Methods
+## Methods
 
 We mined 31 Reddit threads specifically focused on nutritional information—yielding 744 comments—and applied an OpenAI API–based NLP approach, supplemented by team validation, to extract key themes, common questions, commonly discussed dietary items, lifestyle changes, emotional states, and prevalent misconceptions.
 
 
-## 🗂️ Global Key Themes
+## Global Key Themes
 | #  | Theme                                      |
 | -- | ------------------------------------------ |
 |  1 | HPV clearance                      |
@@ -25,7 +25,7 @@ We mined 31 Reddit threads specifically focused on nutritional information—yie
 
 
 
-## ❓ Global Common Questions
+## Global Common Questions
 | #  | Question                                                      |
 | -- | ------------------------------------------------------------- |
 |  1 | What dietary changes can reduce HPV risk?                     |
@@ -34,7 +34,7 @@ We mined 31 Reddit threads specifically focused on nutritional information—yie
 |  4 | What are common misconceptions about HPV and cervical cancer? |
 
 
-## 🥗 Dietary Items Mentioned
+## Dietary Items Mentioned
 | Rank | Item                               |
 | ---- | ---------------------------------- |
 |  1   | Antioxidants (Vitamins A, C, D, E) |
@@ -44,13 +44,13 @@ We mined 31 Reddit threads specifically focused on nutritional information—yie
 |  5   | Zinc        |
 
 
-## 💊 Max Supplements Reported by One Individual
+## Max Supplements Reported by One Individual
 | Count | Items                                                                                   |
 | ----- | --------------------------------------------------------------------------------------- |
 |  15+    | AHCC, Papillex, Folid Acid, Multi Vitam, Mushrooms and more |
 
 
-## 🏃 Lifestyle Changes (Non‑Dietary)
+## Lifestyle Changes (Non‑Dietary)
 | #  | Change                                           |
 | -- | ------------------------------------------------ |
 |  1 | Avoiding Smoking                                 |
@@ -60,7 +60,7 @@ We mined 31 Reddit threads specifically focused on nutritional information—yie
 |  5 | Following Cooking Methods that Reduce Acrylamide |
 
 
-## 😌 Emotional States Observed
+## Emotional States Observed
 | #  | State   |
 | -- | ------- |
 |  1 | Concern |
@@ -69,7 +69,7 @@ We mined 31 Reddit threads specifically focused on nutritional information—yie
 |  4 | Hope/relief    |
 
 
-## ⚠️ Common Misconceptions
+## Common Misconceptions
 - HPV is **not** common
 - HPV **always** leads to cervical cancer
 - **Only** women can get HPV
