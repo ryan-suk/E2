@@ -4,9 +4,9 @@
 
 # Empathetic Empowerment (E2)
 
-## >> 🤖 To check our PRELIMINARY DATA >>> 👉[Click here to view the preliminary results](https://github.com/ryan-suk/E2/tree/main/prelim%20data)
+## >> To check our PRELIMINARY DATA >>> 👉[Click here to view the preliminary results](https://github.com/ryan-suk/E2/tree/main/prelim%20data)
 
-## 📍 Project Overview
+## Project Overview
 
 **Empathetic Empowerment** is a research initiative to enhance patient understanding and follow-up care after abnormal cervical cancer screening results. Despite effective screening programs, many women experience confusion, anxiety, and stigma when faced with abnormal cytology or positive HPV tests, often compounded by misinformation online and rushed clinic discussions. 
 
@@ -15,19 +15,19 @@ This project addresses these challenges by:
 - Analyzing public discourse around abnormal cervical cancer screening using natural language processing (NLP) and large language models (LLMs)
 - Identifying key emotional and informational gaps.
 
-## 🧠 Methodological Highlights
+## Methodological Highlights
 
 - LLM-powered natural language processing (NLP)
 - Co-design with plain-language specialists and patient advocates
 
-## 📁 Repository Contents
+## Repository Contents
 
 - `data/`: Placeholder or linked directory for de-identified data (if publicly shareable)
 - `code/`: Scripts used for text preprocessing, topic modeling, and qualitative clustering
 - `docs/`: Project summary documents, plain-language explanations, and IRB-approved protocols (as shareable)
 - `README.md`: This file
 
-## 🌎 Intended Impact
+## Intended Impact
 
 By validating patient concerns, correcting misinformation, and facilitating informed, empathetic dialogue, Empathetic Empowerment aims to:
 
